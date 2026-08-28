@@ -34,11 +34,7 @@ a {
   overflow: hidden;
   padding: 48px 24px 68px;
   isolation: isolate;
-  background:
-    linear-gradient(rgba(80, 69, 143, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(80, 69, 143, 0.035) 1px, transparent 1px),
-    radial-gradient(circle at 50% 12%, #ffffff 0, #f8f7fc 44%, #f1eff8 100%);
-  background-size: 44px 44px, 44px 44px, auto;
+  background: radial-gradient(circle at 50% 12%, #ffffff 0, #f8f7fc 44%, #eeeaf8 100%);
 }
 
 .ambient {
@@ -60,6 +56,23 @@ a {
 .ambient-two {
   bottom: -260px;
   left: -140px;
+}
+
+.lotus-backdrop {
+  position: absolute;
+  z-index: -1;
+  bottom: -3%;
+  left: 50%;
+  width: max(900px, 100vw);
+  max-width: 1440px;
+  height: auto;
+  transform: translateX(-50%);
+  opacity: 0.74;
+  filter: saturate(0.82) contrast(0.96);
+  pointer-events: none;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0 58%, rgba(0, 0, 0, 0.22) 64%, #000 78%);
+  mask-image: linear-gradient(to bottom, transparent 0 58%, rgba(0, 0, 0, 0.22) 64%, #000 78%);
 }
 
 .portal-card {
@@ -203,6 +216,12 @@ h1 {
 
   .portal-card {
     border-radius: 24px;
+  }
+
+  .lotus-backdrop {
+    bottom: 3%;
+    width: 185vw;
+    opacity: 0.66;
   }
 
   .system-label {

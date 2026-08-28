@@ -5,6 +5,14 @@ export default function Home() {
     <main className="portal-shell">
       <div className="ambient ambient-one" aria-hidden="true" />
       <div className="ambient ambient-two" aria-hidden="true" />
+      <img
+        className="lotus-backdrop"
+        src="./og.png"
+        alt=""
+        width="1200"
+        height="630"
+        aria-hidden="true"
+      />
 
       <section className="portal-card" aria-labelledby="portal-title">
         <div className="emblem-wrap">
