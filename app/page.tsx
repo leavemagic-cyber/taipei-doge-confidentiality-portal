@@ -34,8 +34,6 @@ export default function Home() {
           <span>進入本系統</span>
           <span className="button-arrow" aria-hidden="true">→</span>
         </a>
-
-        <p className="destination-note">點選後將前往 NotebookLM</p>
       </section>
 
       <footer className="page-footer">
