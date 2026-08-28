@@ -7,10 +7,10 @@ export default function Home() {
       <div className="ambient ambient-two" aria-hidden="true" />
       <img
         className="lotus-backdrop"
-        src="./og.png"
+        src="./lotus-backdrop-v2.png"
         alt=""
-        width="1200"
-        height="630"
+        width="1730"
+        height="909"
         aria-hidden="true"
       />
 

@@ -61,18 +61,16 @@ a {
 .lotus-backdrop {
   position: absolute;
   z-index: -1;
-  bottom: -3%;
+  bottom: 6%;
   left: 50%;
-  width: max(900px, 100vw);
-  max-width: 1440px;
+  width: max(840px, 92vw);
+  max-width: 1360px;
   height: auto;
   transform: translateX(-50%);
-  opacity: 0.74;
-  filter: saturate(0.82) contrast(0.96);
+  opacity: 0.86;
+  filter: saturate(0.95) contrast(1.02);
   pointer-events: none;
   user-select: none;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0 58%, rgba(0, 0, 0, 0.22) 64%, #000 78%);
-  mask-image: linear-gradient(to bottom, transparent 0 58%, rgba(0, 0, 0, 0.22) 64%, #000 78%);
 }
 
 .portal-card {
@@ -219,9 +217,9 @@ h1 {
   }
 
   .lotus-backdrop {
-    bottom: 3%;
-    width: 185vw;
-    opacity: 0.66;
+    bottom: 9%;
+    width: 165vw;
+    opacity: 0.78;
   }
 
   .system-label {
