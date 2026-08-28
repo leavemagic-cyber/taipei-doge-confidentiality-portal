@@ -3,7 +3,7 @@
   --muted: #6d6980;
   --violet: #50458f;
   --violet-deep: #3e3576;
-  --paper: rgba(255, 255, 255, 0.9);
+  --paper: rgba(246, 241, 255, 0.48);
 }
 
 * {
@@ -85,7 +85,7 @@ a {
     0 28px 80px rgba(47, 39, 91, 0.11),
     0 2px 10px rgba(47, 39, 91, 0.05);
   text-align: center;
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(4px);
   animation: card-in 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
