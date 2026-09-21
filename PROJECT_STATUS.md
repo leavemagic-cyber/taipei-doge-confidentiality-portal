@@ -11,7 +11,9 @@
 - 正式分支：`main`
 - 入口按鈕固定連至：<https://hungyu.pse.is/9hffd6>
 - 最近一次改變頁面行為的 commit：`55ca3e4423001ccf974e53579fafa33758d1dba9`
-- 2026-09-21 重建紀錄前，工作目錄乾淨，`main` 與 `origin/main` 同步於上述 commit。
+- 最近一次已驗證的 Pages 部署 commit：`366d3449692c469b1b31c40a1f71707207e8e418`
+- 最近一次已驗證的 Pages run：[`35555062561`](https://github.com/leavemagic-cyber/taipei-doge-confidentiality-portal/actions/runs/35555062561)，結論 `success`。
+- 正式站於 2026-09-21 10:43（臺北時間）重新查驗為 HTTP 200；入口按鈕、連結、處徽、蓮花與製作人署名均存在，舊平台提示文字不存在。
 - 入口頁及官方處徽的使用均已由使用者明示取得機關授權。
 
 ## 二、使用者已裁定的需求
@@ -53,7 +55,7 @@
 | 2026-08-28 13:36 | `2b69c54` | 將中央卡片改為半透明，讓蓮花穿透顯示 | 回應「中間不要純白」 |
 | 2026-08-28 13:42 | `3a70339` | 換成較小、取材自處徽蓮花語彙的 `lotus-backdrop-v2.png` | 回應蓮花縮小及造型要求 |
 | 2026-08-28 13:47 | `55ca3e4` | 移除「點選後將前往 NotebookLM」及其樣式 | 不再顯示已改名平台名稱 |
-| 2026-09-21 | 本次紀錄更新 | 補建本檔、補上強制續作規則，並把 README 改成平台中性說明 | 修正先前未建立完整交接紀錄的缺失；不改變頁面畫面或按鈕 |
+| 2026-09-21 10:42 | `876e5b9`、`366d344` | 補建本檔、補上強制續作規則，並把 README 改成平台中性說明 | 修正先前未建立完整交接紀錄的缺失；不改變頁面畫面或按鈕 |
 
 完整 commit 雜湊可用 `git log --reverse` 查閱；上表短雜湊只供閱讀。
 
@@ -87,9 +89,9 @@
 - commit：`876e5b9c69378ae8a57b2ba1e53eb977f61262a6`
 - 本機建置：`npm run build` PASS；Next.js 靜態頁 3/3 產生成功。
 - 格式檢查：`git diff --check` PASS；只有 Git 提示日後可能將 LF 轉為 CRLF，沒有空白錯誤。
-- GitHub Pages run：待推送後查驗。
-- 正式站查驗：本次推送前以 PowerShell 與網頁讀取工具查驗，均遇到連線逾時／不可存取；暫列 `未驗證`，不可視為網站失效。
-- 未完成事項或風險：推送後必須補記 workflow run 及正式站結果；本次沒有改動頁面畫面、按鈕或資產。
+- GitHub Pages run：`35555062561`，對應 commit `366d3449692c469b1b31c40a1f71707207e8e418`；build 與 deploy jobs 均 PASS，總結論 `success`。
+- 正式站查驗：`https://leavemagic-cyber.github.io/taipei-doge-confidentiality-portal/?record-check=1789958631` 回應 HTTP 200；主按鈕、`https://hungyu.pse.is/9hffd6`、`doge-emblem.png`、`lotus-backdrop-v2.png`、`製作：鄭宏宇` 均存在；「點選後將前往 NotebookLM」與 `NotebookLM` 均不存在。兩個圖片資產另以正式網址取得 HTTP 200，大小分別為 142,760 與 1,189,654 bytes。
+- 未完成事項或風險：本次沒有改動頁面畫面、按鈕或資產；workflow 有 GitHub 提供的非阻擋性 Node.js action runtime 與未來 Ubuntu runner 遷移警告，需在後續維護時檢查新版 actions。
 
 每次實質修改或部署，直接在本節上方新增一筆，不得只留在對話中：
 
@@ -110,6 +112,7 @@ GitHub Pages run：run ID、commit、success / failure / 未驗證
 - 按鈕使用外部短網址；短網址的最終導向可在本儲存庫之外變更。需要對外發布前，應另行查驗最終導向。
 - GitHub Pages 是公開網站；下架後，搜尋引擎或瀏覽器快取不一定立即消失。
 - 官方處徽僅記錄為本專案已獲授權使用，本儲存庫不授權第三人另行使用。
+- 2026-09-21 的成功 workflow 另有非阻擋性警告：部分 GitHub actions 原以 Node.js 20 執行，當時被強制改用 Node.js 24；`ubuntu-latest` 預告將於 2026-10-19 起遷移至 Ubuntu 26。這不影響該次成功發布，但後續仍應檢查 action 版本相容性。
 
 ## 八、撤除方式
 
@@ -119,4 +122,4 @@ GitHub Pages run：run ID、commit、success / failure / 未驗證
 ## 九、目前待辦
 
 - 沒有尚未實作的畫面修改。
-- 本次紀錄完成後，仍須完成 GitHub Pages workflow 與正式網址的當次線上查驗，結果應寫入本檔或在本次交付中明確標示。
+- 2026-09-21 的紀錄補正、GitHub Pages 發布及正式站查驗均已完成。
