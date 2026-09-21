@@ -1,6 +1,6 @@
 # 臺北市政府政風處｜公務機密智能輔助系統入口
 
-這是一個獨立的 GitHub Pages 靜態入口頁，只提供前往公務機密 NotebookLM 的按鈕；不包含知識庫來源、政風資料或使用者資料。
+這是一個獨立的 GitHub Pages 靜態入口頁，只提供前往公務機密智能輔助系統的按鈕；不包含知識庫來源、政風資料或使用者資料。
 
 頁面使用的臺北市政府政風處官方處徽已取得機關授權。本儲存庫未另行授權第三人使用該處徽。
 
@@ -11,6 +11,8 @@ https://leavemagic-cyber.github.io/taipei-doge-confidentiality-portal/
 ## 更新方式
 
 修改 `app/page.tsx` 或 `app/globals.css` 後推送到 `main`，GitHub Pages 會自動重新發布。
+
+每次修改或發布前後，都必須同步更新 [`PROJECT_STATUS.md`](./PROJECT_STATUS.md)。該檔是本專案的正式現況、決策、驗證及續作紀錄；不得只把進度留在對話中。
 
 ## 暫時撤除
 
